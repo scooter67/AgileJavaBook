@@ -60,30 +60,6 @@ public class CourseSessionTest {
 
 
 
-    // Let's face it this code is ugly.  But it's in the book.
-
-
-    @Test
-    @DisplayName("Test Report")
-    void testRosterReport() {
-        session.enroll(new Student("A"));
-        session.enroll(new Student("B"));
-
-        String rosterReport = session.getRosterReport();
-        assertEquals(
-                CourseSession.ROSTER_REPORT_HEADER
-                        + "A"
-                        + CourseSession.NEWLINE
-                        +"B"
-                        + CourseSession.NEWLINE
-                        + CourseSession.ROSTER_REPORT_FOOTER
-                        + "2"
-                        + CourseSession.NEWLINE
-                        , rosterReport);
-
-        System.out.println("Test by enrolling two students and testing subsequent report");
-    }
-
 
     @Test
     @DisplayName("Test start and end dates")

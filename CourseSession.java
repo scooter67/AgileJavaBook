@@ -27,14 +27,10 @@ public class CourseSession {
      */
 
     static final String NEWLINE = System.getProperty("line.separator");
-
     private java.util.ArrayList<Student> students = new java.util.ArrayList<Student>();
     private String department;
     private String number;
     private Date startDate;
-
-    //Doesn't say in the book what these are supposed to be so I just "" 'em.
-
     static final String ROSTER_REPORT_HEADER = "Student"+NEWLINE+"----"+NEWLINE;
     static final String ROSTER_REPORT_FOOTER = NEWLINE+"# students = ";
 
@@ -66,6 +62,11 @@ public class CourseSession {
         return students.get(index);
     }
 
+    public ArrayList<Student> getStudents()
+    {
+        return students;
+    }
+
     public Date getEndDate() {
 
 
@@ -92,19 +93,15 @@ public class CourseSession {
     String getRosterReport()
     {
 
-        //clunk!!
-
         StringBuilder buffer = new StringBuilder();
 
         buffer.append(ROSTER_REPORT_HEADER);
+        for(Student student:students)
+        {
+            buffer.append(student.getName());
+            buffer.append(NEWLINE);
+        }
 
-        Student student=students.get(0);
-        buffer.append(student.getName());
-        buffer.append(NEWLINE);
-
-        student = students.get(1);
-        buffer.append(student.getName());
-        buffer.append(NEWLINE);
 
         buffer.append(ROSTER_REPORT_FOOTER+students.size()+NEWLINE);
 
