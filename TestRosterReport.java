@@ -6,8 +6,10 @@ import org.junit.jupiter.api.Test;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import studentinfo.RosterReporter;
 
 import static studentinfo.CourseSessionTest.createDate;
+
 
 public class TestRosterReport {
 

@@ -11,7 +11,7 @@ public class RosterReporter {
     static final String ROSTER_REPORT_HEADER = "Student"+NEWLINE+"----"+NEWLINE;
     static final String ROSTER_REPORT_FOOTER = NEWLINE+"# students = ";
 
-    void RosterReporter(CourseSession session)
+    RosterReporter(CourseSession session)
     {
         this.session=session;
     }
